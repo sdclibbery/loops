@@ -26,6 +26,7 @@ with_fx :reverb do
     end
   end
   
+  sleep 4
   live_loop :syncopate do
     stop
     sync :beats
@@ -36,6 +37,7 @@ with_fx :reverb do
     end
   end
   
+  sleep 4
   with_fx :slicer do
     live_loop :hit do
       with_fx :lpf, cutoff:rrand(70, 90) do
@@ -46,8 +48,9 @@ with_fx :reverb do
     end
   end
   
+  sleep 4
   live_loop :progression do
-    with_fx :lpf, cutoff:[70,80,90,100,90,80,70,60].ring.tick do
+    with_fx :lpf, cutoff:[70,80,90,100,90,80].ring.tick do
       sync :beats
       sleep 1
       sample :bass_voxy_hit_c, rate:1, amp:2

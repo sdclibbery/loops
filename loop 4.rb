@@ -27,6 +27,7 @@ with_fx :reverb do
   end
   
   live_loop :syncopate do
+    stop
     sync :beats
     sleep rrand(0.05, 0.2)
     4.times do
@@ -57,7 +58,7 @@ with_fx :reverb do
       sleep 0.125
       sample :bass_voxy_hit_c, rate:0.75, amp:2
       sleep 0.125
-      sample :bass_voxy_hit_c, rate:1, amp:2
+      sample :bass_voxy_hit_c, rate:1, amp:[2,0].choose
     end
   end
 end

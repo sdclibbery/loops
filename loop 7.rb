@@ -5,6 +5,7 @@ with_fx :reverb do
     sleep 8
   end
   
+  sleep 8
   live_loop :bass do
     sync :beats
     sample :bass_thick_c
@@ -13,15 +14,16 @@ with_fx :reverb do
     sleep 1
   end
   
+  sleep 8
   live_loop :lander do
     sync :beats
     sleep 4
     sample :ambi_lunar_land, rate:1, lpf:80
   end
   
+  sleep 8
   live_loop :crow do
     sync :beats
-    stop
     sleep 3
     sample :misc_crow, amp: 0.5
     sleep 2
@@ -30,9 +32,9 @@ with_fx :reverb do
     sample :misc_crow, amp: 0.4
   end
   
+  sleep 8
   live_loop :arpeg do
     sync :beats
-    stop
     sleep 1.9743854763297
     use_synth :beep
     c = chord(:C5, :minor7).ring

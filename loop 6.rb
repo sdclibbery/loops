@@ -1,13 +1,16 @@
 with_fx :reverb do
+  
   live_loop :ambient do
-    #sample :ambi_choir, rate:[0.5,0.525,0.475].choose, amp:0.5
-    sleep rrand(2,3)
+    sample :ambi_choir, rate:[0.5,0.375].choose, amp:0.5
+    sleep 3
   end
-  sleep 4
+  
+  sleep 8
   live_loop :break do
     sample :loop_mika, beat_stretch:16
     sleep 16
   end
+  
   sleep 4
   live_loop :bass do
     stop
@@ -27,6 +30,7 @@ with_fx :reverb do
       end
     end
   end
+  
   sleep 4
   live_loop :sweep do
     sync :break

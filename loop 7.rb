@@ -5,7 +5,7 @@ with_fx :reverb do
     sleep 8
   end
   
-  sleep 8
+  sleep 16
   live_loop :bass do
     sync :beats
     sample :bass_thick_c
@@ -14,14 +14,14 @@ with_fx :reverb do
     sleep 1
   end
   
-  sleep 8
+  sleep 16
   live_loop :lander do
     sync :beats
     sleep 4
     sample :ambi_lunar_land, rate:1, lpf:80
   end
   
-  sleep 8
+  sleep 16
   live_loop :crow do
     sync :beats
     sleep 3
@@ -32,7 +32,7 @@ with_fx :reverb do
     sample :misc_crow, amp: 0.4
   end
   
-  sleep 8
+  sleep 16
   live_loop :arpeg do
     sync :beats
     sleep 1.9743854763297

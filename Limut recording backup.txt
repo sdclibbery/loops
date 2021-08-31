@@ -1,0 +1,37 @@
+bpm=115
+vs swirl 0, back=random*(0.2+[1,0,0,0]l1/4@f), mid=white*[1/4:1]n4, fore=rainbow*[1/2:5/4]n4, time=8*[-1:1]n8+2*[-1:1]n2
+k play V., amp=3
+p1 play maxmixmo, room=0.1
+p2 play rantmops, echo=3/4
+p3 play dofdafdif, room=0.1, amp=1/2
+pc play c.gc.gc.c.cl.cl., dur=1/4, rate=([3/2,2]t32,[3,4,5]t8), echo=(1/4,1/2), amp=2/3, room=0.1, chorus
+pb play b.gb.gb.b.cl.cl., dur=1/4, rate=([1/6,1/4]l4, [3/2,1]l4), room=0.1, chorus, echo=5/4
+pr dsaw 0, envelope=pad, oct=(3,4,5), lpf=200+350*([]n4+[]n2+[]n1+[]n1/2), lpr=25, drive=1/4, amp=[0:2]n4*[]l4@f, chop=2
+
+
+scale=phrygian
+root=2.2
+vw webcam 0, recol=oil, zoom=1.2
+vj julia 0, back=transparent, mid=rainbow, add=[-1:12]l1@f
+k play V.
+rm play mvxmvxmv, echo=3/4
+s play ..O.
+hh play --+--+-+, echo=3/4, drive=1/4
+db dbass 0^020, dur=1/4, lpf=523, lpr=12, sus=0.2, oct=3
+ds dsaw 024^625^79, dur=1/2, echo=3/4, lpf=[500:1500]l8+[0:300]r+[0,1000,0,-100,-200]e, chorus, amp=3
+x external 0, drive, amp=1/3, fold
+
+
+ch=[-4:4]r8
+vw webcam 0, monochrome, recol=oil
+vk julia 0, additive, mid=rainbow
+p play x.
+s play ..u.
+rm play mxvm^xvm^x, echo=3/4
+hh play --+-+---+, echo=3/4, drive=1/2, amp=1/3
+b fmbass 0..2..4., dur=1/4, echo=3/4, add=ch
+pad1 swell (0246)(0135), dur=4, sus=2, room=2, chorus, phaser=1/4, chop=[0,1,2]r8, drive=1/2, add=ch
+pad2 dsaw (0246)(0135), dur=4, room=2, chorus, phaser=1/4, lpf=[500:1500]l4@f, lpr=12, oct=(3,4,5,6), add=ch
+pad3 dsaw (0246)(0135), rel=2, oct=(3,4,5,6,7), add=ch
+
+
